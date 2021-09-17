@@ -1,7 +1,6 @@
 import dedent from "dedent";
 import { join, dirname } from "path";
 import { writeFileSync } from "fs";
-import { createRequire } from "module";
 import config from "config-get-fresh";
 
 const { log, error: consoleError } = console;
@@ -25,5 +24,11 @@ setInterval(() => {
   writeFileSync(localYamlPath, localYamlContent);
   console.log({ newTimeout });
 }, 3_000);
+
+const localYamlPath = join(`config`, `local.yaml`);
+const localYamlContent = dedent`
+  timeout: 1
+`;
+writeFileSync(localYamlPath, localYamlContent);
 
 setTimeout(process.exit, 50_000, 0);
