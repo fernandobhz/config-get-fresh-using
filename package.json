@@ -19,7 +19,6 @@
   "homepage": "https://github.com/fernandobhz/config-get-fresh-using#readme",
   "dependencies": {
     "config-get-fresh": "^1.0.3",
-    "dedent": "^0.7.0",
-    "js-yaml": "^4.1.0"
+    "dedent": "^0.7.0"
   }
 }
